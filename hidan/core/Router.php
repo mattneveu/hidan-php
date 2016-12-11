@@ -18,9 +18,43 @@
 * @version 1.0
 */
 
-class _Hidan_Controller
+class _Hidan_Router
 {
-  
+
+  /**
+  * Path to controllers folder
+  * @var string
+  */
+  private $controllersPath;
+
+  /**
+  * constructor
+  */
+  public function __construct()
+  {
+    $this->controllersPath = 'application/controllers';
+  }
+
+  /**
+  * Set controllers path
+  * @var string
+  */
+  public function _setControllerPath(String $path)
+  {
+    $this->controllersPath = $path;
+  }
+
+  /**
+  * Get controllers path
+  * @var string
+  */
+  public function _getControllerPath()
+  {
+    return $this->controllersPath;
+  }
+
+
+
 }
 
 ?>

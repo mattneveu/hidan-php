@@ -18,7 +18,7 @@
 * @version 1.0
 */
 
-class _Hidan_Controller
+class Index extends _Hidan_Controller
 {
   
 }
