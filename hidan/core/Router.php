@@ -37,16 +37,16 @@ class _Hidan_Router
 
   /**
   * Set controllers path
-  * @var string
+  * @param string
   */
-  public function _setControllerPath(String $path)
+  public function _setControllerPath($path)
   {
     $this->controllersPath = $path;
   }
 
   /**
   * Get controllers path
-  * @var string
+  * @return string
   */
   public function _getControllerPath()
   {

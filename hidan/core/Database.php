@@ -20,6 +20,20 @@
 
 class _Hidan_Database
 {
+  public static $dbInstance = array();
+
+  public function __construct($config)
+  {
+    new PDO();
+  }
+
+  public static function _getDb($num = 0)
+  {
+    if(self::$dbInstance[$num] == NULL)
+      self::$dbInstance[$num] = new _Hidan_Database();
+
+    return self::$dbInstance[$num];
+  }
 
 }
 
