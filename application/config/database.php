@@ -18,16 +18,26 @@
 * @version 1.0
 */
 
-require 'hidan-php/libs/http/HTTP.class.php';
+$config = array();
 
-require 'hidan-php/core/Constants.php';
-require 'hidan-php/core/Controller.php';
-require 'hidan-php/core/Database.php';
-require 'hidan-php/core/Lang.php';
-require 'hidan-php/core/Router.php';
-require 'hidan-php/core/Session.php';
-require 'hidan-php/core/Template.php';
+$config[0] = array(
+  'type' => 'mysql',
+  'host' => '',
+  'port' => '3306',
+  'databasename' => '',
+  'user' => '',
+  'userpw' => '',
+);
 
-
+/**
+$config[1] = array(
+  'type' => 'pgsql',
+  'host' => '',
+  'port' => '5432',
+  'databasename' => '',
+  'user' => '',
+  'userpw' => '',
+);
+*/
 
 ?>

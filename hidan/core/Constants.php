@@ -18,16 +18,10 @@
 * @version 1.0
 */
 
-require 'hidan-php/libs/http/HTTP.class.php';
-
-require 'hidan-php/core/Constants.php';
-require 'hidan-php/core/Controller.php';
-require 'hidan-php/core/Database.php';
-require 'hidan-php/core/Lang.php';
-require 'hidan-php/core/Router.php';
-require 'hidan-php/core/Session.php';
-require 'hidan-php/core/Template.php';
-
-
+define('HTTP_BASE', str_replace(array('\\', '//'), '/', dirname($_SERVER['SCRIPT_NAME']).'/'));
+define('HTTP_ROOT', str_replace(basename($_SERVER['SCRIPT_FILENAME']), '', parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH)));
+define('CACHE_PATH', 'cache');
+define('TEMPLATE_PATH', 'application/views/');
+define('SESSION_LIFETIME', 43200);
 
 ?>

@@ -20,7 +20,7 @@
 
 class _Hidan_Controller
 {
-  
+
 }
 
 ?>
