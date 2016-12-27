@@ -51,7 +51,7 @@ class _Hidan_Template extends Smarty
 		$this->setForceCompile(true);
 		$this->setCaching(Smarty::CACHING_OFF);
 
-		require_once 'hidan-php/libs/wcf/BasicFileUtilClass.php';
+		require_once 'hidan/libs/wcf/BasicFileUtilClass.php';
 		return BasicFileUtil::getTempFolder();
 	}
 

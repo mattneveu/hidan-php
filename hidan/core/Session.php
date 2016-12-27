@@ -62,7 +62,7 @@ class _Hidan_Session
 
 	static private function getTempPath()
 	{
-		require_once 'hidan-php/libs/wcf/BasicFileUtilClass.php';
+		require_once 'hidan/libs/wcf/BasicFileUtilClass.php';
 		return BasicFileUtil::getTempFolder();
 	}
 

@@ -18,15 +18,15 @@
 * @version 1.0
 */
 
-require 'hidan-php/libs/http/HTTP.class.php';
+require 'hidan/libs/http/HTTP.class.php';
 
-require 'hidan-php/core/Constants.php';
-require 'hidan-php/core/Controller.php';
-require 'hidan-php/core/Database.php';
-require 'hidan-php/core/Lang.php';
-require 'hidan-php/core/Router.php';
-require 'hidan-php/core/Session.php';
-require 'hidan-php/core/Template.php';
+require 'hidan/core/Constants.php';
+require 'hidan/core/Controller.php';
+require 'hidan/core/Database.php';
+require 'hidan/core/Lang.php';
+require 'hidan/core/Router.php';
+require 'hidan/core/Session.php';
+require 'hidan/core/Template.php';
 
 
 
