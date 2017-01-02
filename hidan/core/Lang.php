@@ -20,6 +20,7 @@
 
 class _Hidan_Lang implements ArrayAccess
 {
+
   private $container = array();
   private $language = array();
   static private $allLanguages = array('en', 'fr', 'de', 'it', 'es');
@@ -114,9 +115,9 @@ class _Hidan_Lang implements ArrayAccess
     ob_start();
     $LNG	= array();
 
-    $path	= 'language/'.$this->getLanguage().'/';
+    $path	= 'application/lang/'.$this->getLanguage().'/';
 
-        foreach($files as $file) {
+    foreach($files as $file) {
       $filePath	= $path.$file.'.php';
       if(file_exists($filePath))
       {
@@ -133,26 +134,26 @@ class _Hidan_Lang implements ArrayAccess
 
   public function offsetSet($offset, $value)
   {
-      if (is_null($offset)) {
-          $this->container[] = $value;
-      } else {
-          $this->container[$offset] = $value;
-      }
+    if (is_null($offset)) {
+        $this->container[] = $value;
+    } else {
+        $this->container[$offset] = $value;
+    }
   }
 
   public function offsetExists($offset)
   {
-      return isset($this->container[$offset]);
+    return isset($this->container[$offset]);
   }
 
   public function offsetUnset($offset)
   {
-      unset($this->container[$offset]);
+    unset($this->container[$offset]);
   }
 
   public function offsetGet($offset)
   {
-      return isset($this->container[$offset]) ? $this->container[$offset] : $offset;
+    return isset($this->container[$offset]) ? $this->container[$offset] : $offset;
   }
 }
 

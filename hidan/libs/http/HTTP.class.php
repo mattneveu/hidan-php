@@ -1,10 +1,7 @@
 <?php
 
 /**
- *  2Moons
- *   by Jan-Otto Kröpke 2009-2016
- *
- * For the full copyright and license information, please view the LICENSE
+ *  HTTP.class.php
  *
  * @package 2Moons
  * @author Jan-Otto Kröpke <slaver7@gmail.com>
@@ -33,11 +30,6 @@ class HTTP {
 	static public function sendHeader($name, $value = NULL)
 	{
 		header($name.(!is_null($value) ? ': '.$value : ''));
-	}
-
-	static public function redirectToUniverse($universe)
-	{
-		HTTP::redirectTo(PROTOCOL.HTTP_HOST.HTTP_BASE."uni".$universe."/".HTTP_FILE, true);
 	}
 
 	static public function sendCookie($name, $value = "", $toTime = NULL)

@@ -18,7 +18,7 @@
 * @version 1.0
 */
 
-class Index extends _Hidan_Controller
+class Error extends _Hidan_Controller
 {
 
   public function __construct()
@@ -26,21 +26,9 @@ class Index extends _Hidan_Controller
 
   }
 
-  /**
-  * show() is the default action method called
-  */
-  public function index()
+  public function show404()
   {
-    // to get a parameter (get, post):
-    // $var = $this->_getParam('name', 'default_value');
-
-    echo 'index <br/>';
-    echo $this->_getParam('param1', 'default');
-  }
-
-  public function toto()
-  {
-    echo 'toto';
+    
   }
 
 }

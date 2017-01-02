@@ -23,5 +23,6 @@ define('HTTP_ROOT', str_replace(basename($_SERVER['SCRIPT_FILENAME']), '', parse
 define('CACHE_PATH', 'cache');
 define('TEMPLATE_PATH', 'application/views/');
 define('SESSION_LIFETIME', 43200);
+define('DEFAULT_LANG', 'en');
 
 ?>

@@ -21,13 +21,18 @@
 require 'hidan/libs/http/HTTP.class.php';
 
 require 'hidan/core/Constants.php';
-require 'hidan/core/Controller.php';
-require 'hidan/core/Database.php';
 require 'hidan/core/Lang.php';
-require 'hidan/core/Router.php';
-require 'hidan/core/Session.php';
+
+$LNG = new _Hidan_Lang();
+$LNG->getUserAgentLanguage();
+
 require 'hidan/core/Template.php';
+require 'hidan/core/Database.php';
+require 'hidan/core/Session.php';
+require 'hidan/core/Router.php';
+require 'hidan/core/Controller.php';
 
-
+// Call Router to launch action
+(new _Hidan_Router)->load();
 
 ?>
