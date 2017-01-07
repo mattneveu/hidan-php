@@ -18,9 +18,10 @@
 * @version 1.0
 */
 
-class _Hidan_Controller extends _Hidan_Template
+class _Hidan_Controller
 {
   private $params = array();
+  private $template;
 
   public function __construct()
   {
@@ -28,7 +29,8 @@ class _Hidan_Controller extends _Hidan_Template
     {
       $this->params = $_POST;
     }
-    parent::__construct();
+
+    $this->template = new _Hidan_Template();
   }
 
   public function _addParams($pa = array())
@@ -107,6 +109,11 @@ class _Hidan_Controller extends _Hidan_Template
 
 		return $var;
 	}
+
+  public function _getTemplate()
+  {
+    return $this->template;
+  }
 
 }
 

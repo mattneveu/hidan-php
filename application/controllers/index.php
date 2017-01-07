@@ -23,7 +23,7 @@ class Index extends _Hidan_Controller
 
   public function __construct()
   {
-
+    parent::__construct();
   }
 
   /**
@@ -34,13 +34,13 @@ class Index extends _Hidan_Controller
     // to get a parameter (get, post):
     // $var = $this->_getParam('name', 'default_value');
 
-    echo 'index <br/>';
-    echo $this->_getParam('param1', 'default');
+    $this->_getTemplate()->show('index/index.tpl');
   }
 
   public function toto()
   {
     echo 'toto';
+    echo $this->_getParam('param1', 'default');
   }
 
 }

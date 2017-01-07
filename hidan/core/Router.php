@@ -88,10 +88,12 @@ class _Hidan_Router
   private function getRoute($url)
   {
     $items = $url;
-
     if (!empty($items))
     {
-      $this->controller = array_shift($items);
+      if(!is_file(realpath($this->controllersPath) . DIRECTORY_SEPARATOR . $items[0] . '.php'))
+        $this->controller = $this->defaultController;
+      else
+        $this->controller = array_shift($items);
       $this->action = array_shift($items);
       $size = count($items);
       if($size >= 2)
