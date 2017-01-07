@@ -22,11 +22,12 @@ $config = array();
 
 $config[0] = array(
   'type' => 'mysql',
-  'host' => '',
+  'host' => 'localhost',
   'port' => '3306',
-  'databasename' => '',
-  'user' => '',
-  'userpw' => '',
+  'databasename' => 'test',
+  'user' => 'root',
+  'userpw' => 'root',
+  'prefix' => '',
 );
 
 /**
@@ -37,6 +38,7 @@ $config[1] = array(
   'databasename' => '',
   'user' => '',
   'userpw' => '',
+  'prefix' => '',
 );
 */
 

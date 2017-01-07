@@ -40,7 +40,7 @@ class _Hidan_Router
                              'controllers'.DIRECTORY_SEPARATOR;
     $this->defaultAction = 'index';
     $this->defaultController = 'index';
-    $this->errorController = 'error';
+    $this->errorController = 'hidanError';
     $this->errorAction = 'show404';
   }
 
@@ -70,7 +70,7 @@ class _Hidan_Router
       $this->file         = $this->controllersPath . $this->controller . '.php';
     }
 
-    include $this->file;
+    include_once $this->file;
 
     $class      = ucfirst($this->controller);
     $controller = new $class();
@@ -90,10 +90,7 @@ class _Hidan_Router
     $items = $url;
     if (!empty($items))
     {
-      if(!is_file(realpath($this->controllersPath) . DIRECTORY_SEPARATOR . $items[0] . '.php'))
-        $this->controller = $this->defaultController;
-      else
-        $this->controller = array_shift($items);
+      $this->controller = array_shift($items);
       $this->action = array_shift($items);
       $size = count($items);
       if($size >= 2)

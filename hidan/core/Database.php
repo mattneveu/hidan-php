@@ -38,7 +38,7 @@ class _Hidan_Database
 		$db->query("set names utf8");
 
     $this->dbHandle = $db;
-    $this->dbPrefix = $config['prefix'];
+    $this->dbPrefix = $config[$num]['prefix'];
   }
 
   public static function _getDb($num = 0)
@@ -63,7 +63,7 @@ class _Hidan_Database
 
     $this->rowCount = false;
 
-    $qry = preg_replace('/%%\(.*\)%%/', $this->dbPrefix . '\1', $qry);
+    $qry = preg_replace('/%%(.*)%%/i', $this->dbPrefix . '$1', $qry);
 
 		$stmt	= $this->dbHandle->prepare($qry);
 

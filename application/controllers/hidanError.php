@@ -18,17 +18,17 @@
 * @version 1.0
 */
 
-class Error extends _Hidan_Controller
+class HidanError extends _Hidan_Controller
 {
 
   public function __construct()
   {
-
+    parent::__construct();
   }
 
   public function show404()
   {
-    
+    $this->_getTemplate()->show('error/404.tpl');
   }
 
 }

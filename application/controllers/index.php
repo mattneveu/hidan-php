@@ -34,6 +34,7 @@ class Index extends _Hidan_Controller
     // to get a parameter (get, post):
     // $var = $this->_getParam('name', 'default_value');
 
+    $this->_getTemplate()->assign_vars(array('toto' => 'Toto says hello'));
     $this->_getTemplate()->show('index/index.tpl');
   }
 
@@ -41,6 +42,15 @@ class Index extends _Hidan_Controller
   {
     echo 'toto';
     echo $this->_getParam('param1', 'default');
+  }
+
+  public function testdb()
+  {
+    $db = _Hidan_Database::_getDb(0);
+    $sql = "SELECT * FROM %%users%% WHERE id=:id";
+    $myUser = $db->selectSingle($sql, array(':id' => 1));
+    $this->_getTemplate()->assign_vars(array('user' => $myUser));
+    $this->_getTemplate()->show('index/testdb.tpl');
   }
 
 }

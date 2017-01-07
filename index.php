@@ -25,6 +25,10 @@ require 'hidan/core/Lang.php';
 
 $LNG = new _Hidan_Lang();
 $LNG->getUserAgentLanguage();
+/** The default Lang file included is CUSTOM.PHP
+* You may add other files by filling the array :
+*/
+$LNG->includeData(array());
 
 require 'hidan/core/Template.php';
 require 'hidan/core/Database.php';
